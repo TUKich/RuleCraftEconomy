@@ -1,0 +1,113 @@
+commands:
+  invalid_arguments: "&cНеверные аргументы команды!"
+  updated_tnp: "&aТеперь у города $town единиц ТНП: &c$tnp"
+  updated_rm: "&aТеперь у города $town единиц РМ: &c$rm"
+  updated_ef: "&aТеперь у города $town тип экономики: &c$ef"
+  ef_have_cooldown: "&cВы уже изменяли тип экономики сегодня! Дождитесь следующего дня."
+  this_ef_is_now: "&cУ вас уже стоит этот тип экономики."
+  setting_of_ef_is_limited: "&cВы можете изменить тип экономики лишь на тот, значение которого отличается на 1 от текущего."
+  town_dont_have_rm: "&cУ вашего города нет $rm единиц РМ."
+  war_declared: "&aНация $attacker объявила войну нации $defender с целью: $casus_beli."
+  nbal: "&aЕдиниц РМ у нации $nation:&c $rm. &aСодержание:&c $cost. &aНалог:&c $tax."
+commands_errors:
+  dont_have_permission: "&cУ вас нет прав на использование этой команды!"
+  this_town_is_not_exists: "&cГорода $town не существует"
+  player_is_not_in_the_town: "&cВы не состоите в городе!"
+  arg_must_be_int: "&cВведено нецелое число!"
+  you_have_already_declared_war: "&cВаша нация уже кому-то объявила войну!"
+  you_cant_declare_war_to_you: "&cВы не можете объявить войну своей нации!"
+  this_nation_is_not_exists: "&cНации $nation не существует!"
+  player_is_not_in_the_nation: "&cВы не состоите в нации!"
+  your_nation_is_not_in_war: "&cВаша нация ни с кем не воюет!"
+  this_nation_is_not_in_war: "&cЭта нация ни с кем не воюет!"
+  this_nations_is_not_in_war: "&cЭти нации не воюют друг с другом!"
+  one_of_this_nations_is_not_exists: "&cОдной из указанных наций не существует!"
+  now_nowar_time: "&cСейчас войны не проводятся!"
+  tnew_dont_have_recourсes: "&cДля создания города у вас должно быть: $cobblestone булыжника, $iron_ingot железных слитков, $diamond алмазов."
+  nnew_dont_have_recourсes: "&cДля создания нации у вас должно быть $gold_ingot золотых слитков."
+  toutpost_dont_have_recourсes: "&cДля создания аванпоста у вас должно быть $emerald изумрудов."
+  nsettax_greater_max_tax: "&cНельзя поставить налог выше 1/4 от содержания нации ($max_tax РМ)!"
+  value_less_zero: "&cАргументы команды меньше нуля!"
+  
+  tbal_invalid_arguments: "&cНеверные аргументы команды! Используйте: /tbal [город]"
+  trmadd_invalid_arguments: "&cНеверные аргументы команды! Используйте: /trmadd [город] [кол-во РМ]"
+  tnpadd_invalid_arguments: "&cНеверные аргументы команды! Используйте: /tnpadd [город] [кол-во ТНП]"
+  tsetef_invalid_arguments: "&cНеверные аргументы команды! Используйте: /tsetef [город] [тип экономики]"
+  tef_invalid_arguments: "&cНеверные аргументы команды! Используйте: /tef [тип экономики]"
+  nrmadd_invalid_arguments: "&cНеверные аргументы команды! Используйте: /trmadd [кол-во РМ]"
+  declare_war_invalid_arguments: "&cНеверные аргументы команды! Используйте: /declare_war [нация] [цель]"
+  warinfo_invalid_arguments: "&cНеверные аргументы команды! Используйте: /warinfo [нация 1] [нация 2]"
+  nsettax_invalid_arguments: "&cНеверные аргументы команды! Используйте: /nsettax [кол-во РМ]"
+events:
+  town_costs_collected: "&aСодержание вашего города было собрано. Собрано &c$tnp&a единиц ТНП, &c$rm&a единиц РМ. ТНП сейчас: &c$tnp_now&a. Единиц РМ сейчас: &c$rm_now&a."
+  town_deleted: "&aГород $town пал из-за того, что не смог покрыть содержание."
+  nation_costs_collected: "&aСодержание вашей нации было собрано. Собрано &c$rm&a единиц РМ. Единиц РМ сейчас: &c$rm_now&a."
+  nation_deleted: "&aНация $nation пала из-за того, что не смогла покрыть содержание."
+  war_declared: "&aНация $attacker начала войну против нации $defender ($casus_beli)."
+  war_ends_1_no_winner: "&aВойна между нациями $attacker и $defender закончилась ничем. Все территории возвращены."
+  war_ends_1_attacker_winner: "&aНация $attacker одержала победу в войне, а нация $defender была уничтожена. Все территории возвращены."
+  war_ends_1_defender_winner: "&aНация $defender одержала победу в войне, а нация $attacker была уничтожена. Все территории возвращены."
+  war_ends_2_no_winner: "&aВойна между нациями $attacker и $defender закончилась ничем, все территории возвращены."
+  war_ends_2_attacker_winner: "&aНация $attacker одержала победу в войне, а нация $defender потеряла часть территорий."
+  war_ends_2_defender_winner: "&aНация $defender одержала победу в войне, а нация $attacker потеряла часть территорий."
+  war_chunk_percent_defender: "&aНация $defender потеряла чанк. Теперь она контролирует $chunk_percent% своей изначальной территории."
+  war_truce_no_chunks: "&aНация $loser проиграла нации $winner и вынуждена была заключить перемирие, так как потеряла большую часть территорий."
+  war_score_defender: "&aУ нации $defender убили игрока и она потеряла 1 очко. Теперь у неё $score очков."
+  war_truce_no_score: "&aНация $loser проиграла нации $winner и вынуждена была заключить перемирие, так как потеряла все свои очки."
+  your_town_will_be_deleted_next_day: "&c ВАШ ГОРОД БУДЕТ УДАЛЁН НА СЛЕДУЮЩИЙ ДЕНЬ, ТАК КАК ОН НЕ МОЖЕТ ПОКРЫТЬ СВОЁ СОДЕРЖАНИЕ."
+  your_nation_will_be_deleted_next_day: "&с ВАША НАЦИЯ БУДЕТ УДАЛЕНА НА СЛЕДУЮЩИЙ ДЕНЬ, ТАК КАК ОНА НЕ МОЖЕТ ПОКРЫТЬ СВОЁ СОДЕРЖАНИЕ."
+  nation_tax_collected: "&aНалог нации в $rm_collected РМ собран с города $town."
+casus_beli:
+  destroy_alliance: "Уничтожение альянса"
+  conquer: "Захват территории"
+ef:
+  ef_1: "Аграраня (1)"
+  ef_2: "Лёгкая (2)"
+  ef_3: "Сбалансированная (3)"
+  ef_4: "Тяжёлая (4)"
+  ef_5: "Военная (5)"
+  ef_1_rm_k: 50 # Сколько процентов от обычного содержания теперь будет требоваться для содержания при данной экономике
+  ef_2_rm_k: 75
+  ef_3_rm_k: 100
+  ef_4_rm_k: 175
+  ef_5_rm_k: 350
+  ef_1_tnp_k: 50
+  ef_2_tnp_k: 75
+  ef_3_tnp_k: 100
+  ef_4_tnp_k: 175
+  ef_5_tnp_k: 350
+warinfo:
+  warinfo_open_string_war:   "&a==========[&6 Война &a]=========="
+  warinfo_open_string_truce: "&a====[&6 Война (ПЕРЕМИРИЕ) &a]===="
+  warinfo_attacker_name:     "&6$nation (Агрессор)"
+  warinfo_defender_name:     "&6$nation (Защитник)"
+  warinfo_chunks:            "&a - Кол-во чанков:&c $chunks_now/$chunks_on_start ($chunk_percent%)"
+  warinfo_score:             "&a - Кол-во очков:&c $score_now/$score_on_start ($score_percent%)"
+  warinfo_casus_beli:        "&aЦель войны:&c $casus_beli"
+  warinfo_winner:            "&aПобедитель:&c $winner"
+  no_winner:                 "нет"
+  warinfo_close_string:      "&a============================="
+tbal:
+  tbal_open_string:          "&a=========[$town]========="
+  tbal_bank_of_town_name:    "&aРесурсы города:"
+  tbal_bank_of_town_values:  "&a - &c$tnp ТНП&a - &c$rm РМ"
+  tbal_cost_of_town_name:    "&aСодержание города в день:"
+  tbal_cost_of_town_values:  "&a - &c$tnp_cost ТНП&a - &c$rm_cost РМ"
+  tbal_nation_tax:           "&a - &c$tax РМ (налог нации)"
+  tbal_ef_of_town:           "&aФорма экономики: &c$ef"
+  tbal_close_string:         "&a=========================="
+costs:
+  tnew_cobblestone: 256 # Кол-во булыги для создания города
+  tnew_iron_ingot: 64 # Кол-во железа для создания города
+  tnew_diamond: 16 # Кол-во алмазов для создания города
+  nnew_gold_ingot: 96 # Кол-во золота для создания нации
+  toutpost_emerald: 10 # Кол-во изумрудов для создания аванпоста
+  rm: 1 # РМ за 1 чанк
+  tnp: 1 # ТНП за 1 человека
+  nation_rm: 1 # РМ за 1 чанк нации
+  p_score_coef: 10 # (Кол-во человек / на этот коэффициент) * базовое кол-во очков
+  base_score: 100 # Базовое кол-во очков
+  no_nation_debuff_num: 10 # С этого числа игроков в городе без нации на город накладывается дебафф
+  auto_lose_chunk_percent: 40 # Если у нации меньше стольки процентов изначальных территорий, то она автоматически проигрывает
+  white_peace_chunk_percent: 70 # Если у обоих наций больше стольки процентов изначальных территорий, то заключается белый мир
+settings:
